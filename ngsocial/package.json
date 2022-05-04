@@ -1,8 +1,11 @@
 {
-  "name": "root",
+  "name": "@ngsocial/ngsocial",
   "private": true,
   "devDependencies": {
     "lerna": "^4.0.0"
   },
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "workspaces": [
+    "./packages/*"
+  ]
 }
