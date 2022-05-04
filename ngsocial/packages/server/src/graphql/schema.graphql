@@ -36,9 +36,10 @@ type Post {
   id: ID!
   text: String
   image: String
-  # author: User!
-  author: ID!
-  user: ID!
+  author: User!
+  # author: ID!
+  # user: ID!
+  user: User!
   commentsCount: Int!
   likesCount: Int!
   likedByAuthUser: Boolean
@@ -49,20 +50,23 @@ type Post {
 
 type Comment {
   id: ID!
-  author: ID!
-  user: ID!
+  # author: ID!
+  # user: ID!
+  user: User!
   comment: String!
-  # author: User!
-  post: ID!
+  author: User!
+  # post: ID!
+  post: Post!
   createdAt: String!
 }
 
 type Like {
   id: ID!
   author: ID!
-  user: ID!
-  # user: User!
-  post: ID!
+  # user: ID!
+  user: User!
+  # post: ID!
+  post: Post!
   createdAt: String!
 }
 
