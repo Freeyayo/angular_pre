@@ -13,7 +13,7 @@ import { Post } from "./Post";
 export class Comment {
   @PrimaryGeneratedColumn() id: number;
   @Column("text") comment: string;
-  @CreateDateColumn() createAt: Date;
+  @CreateDateColumn() createdAt: Date;
 
   @ManyToOne((type) => User, (user) => user.comments, {
     onDelete: "CASCADE",
