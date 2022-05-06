@@ -5,7 +5,13 @@ import schema from "./graphql/schema";
 import { ApolloServer } from "apollo-server-express";
 import casual from "casual";
 import "reflect-metadata";
-import { createConnection, Connection } from "typeorm";
+import {
+  createConnection,
+  Connection,
+  Repository,
+  getRepository,
+} from "typeorm";
+import { User, Post, Comment, Like, Notification } from "./entity";
 // import { IResolvers } from "@graphql-tools/utils";x
 
 const connection: Promise<Connection> = createConnection();
