@@ -10,7 +10,7 @@ import {
 } from "@ngsocial/graphql";
 import { ApolloError } from "apollo-server-errors";
 
-const resolvers: IResolvers = {
+const resolvers: Resolvers = {
   Query: {
     message: () => "It works",
   },
